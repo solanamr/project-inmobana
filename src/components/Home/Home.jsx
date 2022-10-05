@@ -93,7 +93,10 @@ export default function Home(){
                     </div>
                     )
                 })
-                : <p>Loading...</p>
+                : 
+                <div className={style.progressLoader}>
+                    <div className={style.progress}></div>
+                </div>
             }
             </div>
         <Pagination
