@@ -36,3 +36,10 @@ export function getAllInfo(){
             })
     }
 }
+
+export function searchByName(name){
+    return{
+        type: "SEARCH_HOTEL",
+        payload: name
+    }
+}

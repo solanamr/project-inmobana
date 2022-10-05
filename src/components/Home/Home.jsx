@@ -4,6 +4,9 @@ import Detail from '../Detail/Detail';
 import { getAllInfo } from '../../redux/actions/index'
 import { useDispatch, useSelector } from 'react-redux'
 import Pagination from '../Pagination/Pagination';
+import NavBar from '../NavBar/NavBar';
+import video from '../../assets/video.mp4'
+import style from './style.module.css'
 
 export default function Home(){
 
@@ -16,6 +19,7 @@ export default function Home(){
     const indexLastPage = currentPage * infoPerPage
     const indexFirstPage = indexLastPage - infoPerPage
     const currentInfo = infoApi.slice(indexFirstPage, indexLastPage)
+
     const dispatch = useDispatch()
 
     const paginado = (nroPagina) =>{
@@ -24,10 +28,8 @@ export default function Home(){
     
     useEffect(()=>{
         dispatch(getAllInfo())
-        // console.log(getAllInfo())
     },[])
     
-
     
     useEffect(() =>{
 
@@ -38,7 +40,6 @@ export default function Home(){
              const json = await result.json()
             //  console.log(json)
             
-              // console.log(json)
               const array = []
               if(json.message){
                   setError(!error)
@@ -65,44 +66,43 @@ export default function Home(){
               if(isMount){
                 setHoteles(array)
               }
-
-
-          
          }
 
        resultado()
        .catch(err => setError(!error))
-   
-
     return () => isMount = false;
    }, [error])
 
 //    console.log(hoteles, 'hoteles')
 
-   
 
-    // console.log(hoteles)
     return(
         <div>
-            <Pagination
-            infoPerPage={infoPerPage}
-            infoApi={infoApi.length}
-            paginado={paginado}
-            />
+            <div className={style.container}>
+                <video autoPlay loop muted playsInline className={style.video}>
+                  <source src={video} type="video/mp4"/>
+                </video>
+            <NavBar/>
+            <h1 className={style.title}>HOTELS</h1>
+            <div className={style.containerCards}>
             {
                 currentInfo.length > 0 ? currentInfo.map((h, i) =>{
-                    // console.log(h)
                     return(
-                    <div key={i}>
+                        <div key={i} className={style.cards}>
                         <Detail hotel ={h}/>
-
-
                     </div>
                     )
                 })
                 : <p>Loading...</p>
             }
+            </div>
+        <Pagination
+        infoPerPage={infoPerPage}
+        infoApi={infoApi.length}
+        paginado={paginado}
+        />
         </div>
+    </div>
     )
 }
 

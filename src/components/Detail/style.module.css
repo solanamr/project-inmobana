@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+.name{
+    margin-top: -2px;
+}
+
+.address{
+    margin-top: -20px;
+}
+
+.review{
+    margin-top: -15px;
+}
+
+.rating{
+    margin-top: -15px;
+}
+
+.summary{
+    font-size: 13px;
+    margin-top: -10px;
+}
+
+.avg{
+    margin-top: -10px;
+}
+
+.distance{
+    margin-top: -10px;
+}
+
+.origin{
+    margin-top: -10px;
+}
+
+.img{
+    margin-left: 140px;
+}
