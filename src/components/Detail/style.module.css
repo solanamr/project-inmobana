@@ -3,14 +3,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .name{
-    margin-top: 8px;
+    margin-top: 22px;
 }
 
 .address{
-    margin-top: -20px;
+    margin-top: -15px;
 }
 
 .review{
@@ -21,23 +22,27 @@
     margin-top: -15px;
 }
 
+.divSummary{
+    padding: 10px;
+}
+
 .summary{
     font-size: 13.5px;
-    margin-top: -10px;
+    margin-top: -22px;
 }
 
 .avg{
-    margin-top: -10px;
+    margin-top: -20px;
 }
 
 .distance{
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .origin{
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .img{
-    margin-left: 140px;
+    margin-left: 260px;
 }
