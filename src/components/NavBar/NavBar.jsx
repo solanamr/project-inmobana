@@ -18,7 +18,7 @@ export default function NavBar({setCurrentPage, setOrden}){
         setCurrentPage(1)
         setOrden(`Ordenado ${e.target.value}`)
     }
-    // console.log(handleDistance)
+
 
     function handlePrice(e){
         dispatch(priceSort(e.target.value))
@@ -28,7 +28,6 @@ export default function NavBar({setCurrentPage, setOrden}){
 
     function handleReview(e){
         dispatch(reviewSort(e.target.value))
-        console.log(e.target.value, 'review')
         setCurrentPage(1)
         setOrden(`Ordenado ${e.target.value}`)
     }
