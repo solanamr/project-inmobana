@@ -1,0 +1,105 @@
+.container{
+    background-color: #CEC2B3;
+    height: 90vw;
+    
+}
+
+.pContainer{
+   background-color: #efe8e3;
+   padding: 10px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+    
+}
+
+h1{
+    color: #000000;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.summaryBox{
+    padding: 30px;
+}
+
+.name, .address, .summary, .review, .rating, .avg, .dt, .or{
+    font-family: 'Roboto', sans-serif;
+}
+
+.name{
+    margin-top: 15px;
+    font-weight: 800;
+    font-size: 48px;
+}
+
+
+.address{
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+.summary{
+    margin-top: -20px;
+    font-size: 18px;
+}
+
+.review{
+    margin-top: -35px;
+    font-size: 20px;
+}
+
+.rating{
+    margin-top: -13px;
+    font-size: 20px;
+}
+
+.avg{
+    margin-top: -13px;
+    font-size: 20px;
+}
+
+.dt{
+    margin-top: -13px;
+    font-size: 20px;
+}
+
+.or{
+    margin-top: -13px;
+    font-size: 20px;
+}
+
+.img{
+    width: 900px;
+    height: 600px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.btn{
+    cursor: pointer;
+    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.41); 
+    color: #fff;
+    width: 100px;
+    height: 45px;
+    padding: 5px;
+    border: 0px solid transparent;
+    background-color: rgb(51, 33, 10);
+    border-radius: 10%;
+    transition: all 0.2s linear;
+}
+
+.btn:hover{
+    background-color: #73695c;
+    transition: 0.2s;
+}
+

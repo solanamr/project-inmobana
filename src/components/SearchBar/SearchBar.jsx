@@ -22,7 +22,7 @@ export default function SearchBar({setCurrentPage}){
     return (
       <div>
         <div>
-          <input onChange={(e) => {setName(e.target.value); handleInputChange(e.target.value);}} 
+          <input onChange={(e) => {setName(e.target.value); handleInputChange(e.target.value) ;}} 
           type="text" placeholder="Search hotel" value={name} className={style.input}/>
         </div>
       </div>

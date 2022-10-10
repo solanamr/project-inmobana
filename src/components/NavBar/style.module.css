@@ -11,4 +11,13 @@
     font-size: 20px;
 }
 
+.distance, .price, .review, .rating{
+    margin-top: 25px;
+}
 
+select{
+    background-color:#CEC2B3;
+    border: 1px solid black;
+    height: 35px;
+    border-radius: 5%;
+}

@@ -4,16 +4,15 @@ export function getAllInfo(){
     return async function(dispatch){
             const result = await fetch(`https://59jwubnb4d.execute-api.us-east-1.amazonaws.com/Prod/hotels`)
            const json = await result.json()
-           console.log(json, 'json')
+        //    console.log(json, 'json')
           
             
             const array = []
-            // if(json.message){
-            //     setError(!error)
-            // }
+
             if(json.hotels){
                 for (let i = 0; i < 150; i++) {
                     const hotel = {
+                        id: i,
                         name: json.hotels.name[i],
                         address: json.hotels.address[i],
                         rating: json.hotels.hotel_rating[i],
@@ -38,8 +37,45 @@ export function getAllInfo(){
 }
 
 export function searchByName(name){
-    return{
-        type: "SEARCH_HOTEL",
-        payload: name
-    }
+        return{
+            type: "SEARCH_HOTEL",
+            payload: name
+        }
+        
 }
+
+export function resetDetail(){
+    return({
+        type: "RESET_DETAIL"
+    })
+}
+
+
+export function distanceSort(payload){
+    return({
+        type: "DISTANCE_SORT",
+        payload: payload
+    })
+}
+
+export function priceSort(payload){
+    return({
+        type: "PRICE_SORT",
+        payload: payload
+    })
+}
+
+export function reviewSort(payload){
+    return({
+        type: "REVIEW_SORT",
+        payload: payload
+    })
+}
+
+export function ratingScore(payload){
+    return({
+        type: "RATING_SCORE",
+        payload: payload
+    })
+}
+
